@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login | Cyber Hacking</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#020617;
+  font-family:Arial;
+  color:white;
+}
+
+.login-box{
+  width:320px;
+  padding:25px;
+  background:#020617;
+  border:1px solid #00ffcc;
+  border-radius:15px;
+  text-align:center;
+  box-shadow:0 0 20px #00ffcc;
+}
+
+.login-box img{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  border:2px solid #00ffcc;
+  margin-bottom:15px;
+}
+
+.login-box h2{
+  color:#00ffcc;
+  margin-bottom:20px;
+}
+
+.login-box input{
+  width:91%;
+  padding:12px;
+  margin:12px 0;
+  border:none;
+  border-radius:9px;
+  outline:none;
+}
+
+.login-box button{
+  width:100%;
+  padding:12px;
+  margin-top:12px;
+  background:#00ffcc;
+  border:none;
+  border-radius:8px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+#error{
+  margin-top:10px;
+  color:red;
+  font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+
+  <!-- Random DP -->
+  <img src="https://i.pravatar.cc/150?img=15">
+
+  <h2>LOGIN</h2>
+
+  <input type="text" id="username" placeholder="Username">
+  <input type="password" id="password" placeholder="Password">
+
+  <button onclick="login()">LOGIN</button>
+
+  <div id="error"></div>
+</div>
+
+<script>
+function login(){
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+
+  // CORRECT DETAILS
+  if(username === "Malik Uzair Mk" && password === "1234"){
+    // ✅ ONLY HERE next page open hoga
+    window.location.href = "MalikUzairMk.html";
+  }else{
+    // ❌ GHALAT LOGIN – next page nahi jayega
+    document.getElementById("error").innerText =
+      "Wrong username or password!";
+  }
+}
+</script>
+
+</body>
+</html>
